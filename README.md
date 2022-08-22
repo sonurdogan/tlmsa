@@ -6,7 +6,8 @@ Requires:
 
 
 SUMOnet -> https://github.com/berkedilekoglu/SUMOnet
- bioservices 
+
+bioservices 
 
 
 retrieveData.R -> retrieving data from GDC database and preprocessing data for mapping part.
