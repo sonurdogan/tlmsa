@@ -5,3 +5,7 @@ Mapping mutations that comes from GDC to healthy sequence that comes from Unipro
 Requires:
 SUMOnet
 bioservices 
+
+
+retrieveData.R -> retrieving data from GDC database and preprocessing data for mapping part.
+tutorial.py -> tutorial for mapping mutations, predicting SUMOylation with SUMOnet.
