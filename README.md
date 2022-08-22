@@ -6,11 +6,11 @@ Requires:
 
 
 SUMOnet -> https://github.com/berkedilekoglu/SUMOnet
-
 bioservices 
 
 
 retrieveData.R -> retrieving data from GDC database and preprocessing data for mapping part.
+
 tutorial.py -> tutorial for mapping mutations, predicting SUMOylation with SUMOnet.
 
 
