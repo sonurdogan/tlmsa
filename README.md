@@ -4,10 +4,8 @@ Mapping mutations that comes from GDC to healthy sequence that comes from Unipro
 
 Requires:
 
-
-SUMOnet -> https://github.com/berkedilekoglu/SUMOnet
-
-bioservices 
+SUMOnet: https://github.com/berkedilekoglu/SUMOnet
+ 
 
 
 retrieveData.R -> retrieving data from GDC database and preprocessing data for mapping part.
