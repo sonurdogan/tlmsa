@@ -11,4 +11,4 @@ To use SUMOnet to predict possible SUMOylation, you can use tlmsa.
 
 
 
-![a66ba4a9c2760d70aa056c763c8bbe74](https://user-images.githubusercontent.com/72014272/185979245-6eaf46f0-98d7-4a18-9de6-007cdfaaddd5.gif)
+![stuff](https://user-images.githubusercontent.com/72014272/187074387-013619e0-b09f-4351-9ed1-7359d85e5b3a.png)
