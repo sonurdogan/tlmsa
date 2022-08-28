@@ -250,7 +250,7 @@ def motif_predict(seq):
         
         return (seq,['non_motif'],0)
 
-def predict_motif(df,subseqCol):
+def get_motif(df,subseqCol):
     df['motif']=np.nan
     df['motif_names']=np.nan
     for i in range(df.shape[0]):
@@ -258,26 +258,3 @@ def predict_motif(df,subseqCol):
         df['motif'][i]=c
         df['motif_names'][i]=b
     return df
-
-def predict_sumo(df,subseqCol):
-    x_test=df[subseqCol]
-    x=x_test.values.tolist()
-    s=len(x)
-    list_of_ones= [1] * s
-    y=list_of_ones
-    encoder = Encoding(encoderType='blosum62') 
-    x_Test,y_Test = encoder.get_encoded_vectors_from_data(x,y)
-    input_shape=x_Test.shape
-    print("input shape is:",input_shape)
-    SUMOnet3_model = SUMOnet()
-    SUMOnet3_model.build(input_shape)
-    SUMOnet3_model.load_weights()  
-    y_preds = SUMOnet3_model.predict(x_Test)
-
-    df['nonSumo_prob']=np.nan
-    df['Sumo_prob']=np.nan 
-    for i in range(s):
-        df['nonSumo_prob'][i]=y_preds[i][0]
-        df['Sumo_prob'][i]=y_preds[i][1]
-    return df
-
