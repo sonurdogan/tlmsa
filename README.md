@@ -13,5 +13,3 @@ SUMOnet: https://github.com/berkedilekoglu/SUMOnet
  
 
 
-
-![stuff](https://user-images.githubusercontent.com/72014272/187074387-013619e0-b09f-4351-9ed1-7359d85e5b3a.png)
