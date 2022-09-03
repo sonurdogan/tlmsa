@@ -1,5 +1,5 @@
 # tlmsa
-Mapping mutations that comes from GDC to healthy sequence that comes from Uniprot, predicting possible SUMOylation by using SUMOnet which is pretrained sequantial deep neural network.
+Mapping mutations that comes from GDC to healthy sequence that comes from Uniprot, predicting possible SUMOylation by using SUMOnet which is pretrained sequential deep neural network.
 
 
 SUMOnet: https://github.com/berkedilekoglu/SUMOnet
