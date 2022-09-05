@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-echo "Enter the path for data:"
+echo "Enter the path of the folder where you will download the data:"
 read n
 
-echo "Enter project name:"
+echo "Enter the project name:"
 
 read m
 
