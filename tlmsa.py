@@ -26,7 +26,7 @@ def getseq(df,uniprotCol):
         if (counter%100==0):
             print(len(unique_uniprotid)-counter,'left')
     return df
-
+ 
 def getMutatedseq(df,caseIdCol,HugoSymbolCol,PositionCol,seqCol,aaNameCol):
     df['new_seq']=np.nan
     
