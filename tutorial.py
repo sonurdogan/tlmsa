@@ -8,7 +8,7 @@ from sumonet.model.architecture import SUMOnet
 df=pd.read_csv('TCGA-STAD.csv')
 df=df.drop_duplicates(subset=['case_id', 'Hugo_Symbol','HGVSp_Short'])
 df=df.reset_index(drop=True)
-
+df=df[:30] #just taking first 30 rows to show how tutorial works.
 
 df2=tlmsa.getseq(df,'uniprotID')
 df3=tlmsa.getMutatedseq(df2,'case_id','Hugo_Symbol','positions_','seq','aa_name')
