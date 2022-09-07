@@ -29,6 +29,7 @@ def getseq(df,uniprotCol):
 
 def getMutatedseq(df,caseIdCol,HugoSymbolCol,PositionCol,seqCol,aaNameCol):
     df['new_seq']=np.nan
+    
     unique_case_id=df[caseIdCol].unique()
     for i in unique_case_id:
         df_n=df.loc[df[caseIdCol]==i]
@@ -38,10 +39,14 @@ def getMutatedseq(df,caseIdCol,HugoSymbolCol,PositionCol,seqCol,aaNameCol):
             df_nn=df_nn.reset_index(drop=True)
             
             seq=list(df_nn[seqCol][0])
-            
+
             for k in range(int(len(df_nn))):
                 n_pos=int(int(df_nn[PositionCol][k]))
-                seq[int(n_pos)-1]=df_nn[aaNameCol][k]
+                if n_pos>len(seq):
+                    print('position is out of sequence')
+                    continue
+                else:
+                    seq[int(n_pos)-1]=df_nn[aaNameCol][k]
             
             new_seq="".join(seq)
             
@@ -60,20 +65,23 @@ def getSubseq(df,aaNameCol,PositionCol,newSeqCol):
             pos=df_n[PositionCol]
             seq=str(df_n[newSeqCol].values)[2:-2]
             len_seq=len(seq)
-            if int(pos)<11:
-                a=seq[0:int(pos)+10]
-                for s in range(int(11-pos)):
-                    a="X"+a
-                    
-            elif int((len_seq-int(pos)))<11:
-                a=seq[int(pos)-11:]
-                
-                for s in range(int(10-(len_seq-int(pos)))):
-                    a=a+"X"
-                
+            if len_seq<int(pos):
+                continue
             else:
-                a=seq[int(pos)-11:int(pos)+10]
-            df.loc[int(i),'subseq']=str(a)
+                if int(pos)<11:
+                    a=seq[0:int(pos)+10]
+                    for s in range(int(11-pos)):
+                        a="X"+a
+                    
+                elif int((len_seq-int(pos)))<11:
+                    a=seq[int(pos)-11:]
+                
+                    for s in range(int(10-(len_seq-int(pos)))):
+                        a=a+"X"
+                
+                else:
+                    a=seq[int(pos)-11:int(pos)+10]
+                df.loc[int(i),'subseq']=str(a)
         else:
             continue
     return df
