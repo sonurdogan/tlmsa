@@ -1,7 +1,7 @@
 # tlmsa
 Detection of SUMOylation sites that emerge through mutations in cancer. The pipeline uses the [`SUMOnet`](https://github.com/berkedilekoglu/SUMOnet) to predict possible SUMOylation sites.
-
-Pipeline consist of three main part: 
+&nbsp;
+Pipeline consist of three main part: &nbsp;
 1- Retrieving Mutation data from GDC Database and filtering respected to patients gene that has mutation resulted in lysine and getting all of the mutations of the corresponding genes of the patient since mutation near the mutated K may affect SUMOylation (R code).
 2- Mapping the mutations to wild-type sequence to have mutated sequence of each protein of patient.
 3- Constructing 21 long subsequence (mutated K in the middle) as a input of SUMOnet.
