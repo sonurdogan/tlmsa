@@ -8,17 +8,16 @@ Pipeline consist of three main part:
 - Getting wild type sequence and mapping the mutations to wild-type sequence to have mutated sequence of each protein of patient.
 - Constructing 21 long subsequence (mutated K in the middle) as a input of SUMOnet.
 
-Part 1 can be done by retrieveData.R by defineing TCGA project name in the code. 
-
-Once data is retrieved, Part 2 and 3 can be found as a part of tlmsa python package. 
-
-Part 2 and 3 can perform on a data other than TCGA. Detailed instraction can be found in tutorial.py 
-
 Pipeline can be performed using bash script with a input of path and project name.
 
 ```shell
 ./bash_script/tlmsa.sh
 ```
+
+
+Part 1 can be done by retrieveData.R by defining TCGA project name in the code. Once data is retrieved, Part 2 and 3 can be found as a part of tlmsa python package. 
+
+Also, Part 2 and 3 can perform on a data other than TCGA. Detailed instraction can be found in tutorial.py 
 
 -Pipeline workflow-
 
