@@ -18,5 +18,6 @@ Pipeline can be performed using bash script with a input of path and project nam
 
  ![workflow](https://user-images.githubusercontent.com/72014272/216789003-93ad3991-2f1f-44da-a028-f084efab50bc.jpg)
 
+-Pipeline workflow-
 
 
