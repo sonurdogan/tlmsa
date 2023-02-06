@@ -19,7 +19,8 @@ Part 1 can be done by retrieveData.R by defining TCGA project name in the code. 
 
 Also, Part 2 and 3 can perform on a data other than TCGA. Detailed instruction can be found in tutorial.py 
 
-## -Pipeline workflow-
+
+## Pipeline workflow
 
 
  ![workflow](https://user-images.githubusercontent.com/72014272/216789003-93ad3991-2f1f-44da-a028-f084efab50bc.jpg)
