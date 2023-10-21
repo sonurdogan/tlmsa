@@ -4,13 +4,10 @@ library(readr)
 library(stringr)
 library(tidyverse)
 library(data.table)
-args = commandArgs(trailingOnly=TRUE)
-
-setwd(args[1])
 
 #define query
 query <- GDCquery(
-  project =args[2],
+  project = "TCGA-LUAD", 
   data.category = "Simple Nucleotide Variation", 
   access = "open", 
   legacy = FALSE, 
@@ -71,7 +68,4 @@ data_new <- data_new %>% drop_na(uniprotID)
 #get just following features all data
 data_new=data_new[,c('case_id','Hugo_Symbol','Tumor_Sample_Barcode','Transcript_ID','HGVSp_Short','aa_name','positions_','uniprotID')]
 #save the data
-str2=".csv"
-file_name = paste(args[2],str2,sep="")
-
-write.csv(data_new, file = file_name,row.names=FALSE)
+write.csv(data_new, file = "k_all_mutation2.csv",row.names=FALSE)
