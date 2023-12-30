@@ -17,7 +17,7 @@ Pipeline can be performed using bash script with a input of path and project nam
 
 Part 1 can be done by retrieveData.R by defining TCGA project name in the code. Once data is retrieved, Part 2 and 3 can be found as a part of tlmsa python package. 
 
-Also, Part 2 and 3 can perform on a data other than TCGA. Detailed instruction can be found in tutorial.py 
+Also, part 2 and 3 can perform on a data other than TCGA. Detailed instruction can be found in tutorial.py 
 
 
 ## Pipeline workflow
